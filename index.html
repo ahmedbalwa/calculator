@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advanced Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Advanced Calculator</h1>
+
+<div class="display-container">
+  <span id="memoryIndicator"></span>
+  <input type="text" id="display" 
+  <button id="clearHistory" class="small-btn">Clear Hist</button>
+</div>
+
+<div class="buttons main-grid">
+  <button class="btn">7</button>
+  <button class="btn">8</button>
+  <button class="btn">9</button>
+  <button class="btn operator">/</button>
+
+  <button class="btn">4</button>
+  <button class="btn">5</button>
+  <button class="btn">6</button>
+  <button class="btn operator">*</button>
+
+  <button class="btn">1</button>
+  <button class="btn">2</button>
+  <button class="btn">3</button>
+  <button class="btn operator">-</button>
+
+  <button class="btn">0</button>
+  <button class="btn func" id="toggleSign">±</button>
+  <button class="btn func" id="percent">%</button>
+  <button class="btn operator">+</button>
+
+  <button id="equals" class="btn span-2">=</button>
+  <button class="btn func" id="oneOverX">1/x</button>
+</div>
+
+<button id="modeToggle" class="mode-btn">Sci</button>
+<button id="degRadToggle" class="mode-btn" style="display:none;">Rad</button>
+
+<div class="sci-buttons" style="display:none;">
+  <h4>Scientific</h4>
+  <div class="buttons sci-grid">
+    <button class="btn sci">sin</button>
+    <button class="btn sci">cos</button>
+    <button class="btn sci">tan</button>
+    <button class="btn sci">(</button>
+
+    <button class="btn sci">log</button>
+    <button class="btn sci">sqrt</button>
+    <button class="btn sci">π</button>
+    <button class="btn sci">)</button>
+  </div>
+</div>
+
+<div class="mem-buttons" style="display:none;">
+  <h4>Memory</h4>
+  <div class="buttons mem-grid">
+    <button class="btn mem" id="plusMem">M+</button>
+    <button class="btn mem" id="minusMem">M-</button>
+    <button class="btn mem" id="recallMem">MR</button>
+    <button class="btn mem" id="clearMem">MC</button>
+  </div>
+</div>
+
+<button id="clear" class="clear-btn">C</button>
+<button id="reset" class="reset-btn">Reset</button>
+
+<h3>History (Last 10)</h3>
+<ul id="history"></ul>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

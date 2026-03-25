@@ -1,0 +1,212 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #121212;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.container {
+  background: #1e1e2f;
+  padding: 25px;
+  border-radius: 10px;
+  width: min(90vw, 400px);
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+h1 { margin-top: 0; }
+h3, h4 { font-size: 14px; color: #aaa; margin: 20px 0 10px; }
+
+.display-container {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+#memoryIndicator {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: #ff9500;
+  font-weight: bold;
+}
+
+#display {
+  width: 100%;
+  height: 60px;
+  font-size: 24px;
+  text-align: right;
+  padding: 10px 40px 10px 50px;
+  border: none;
+  border-radius: 5px;
+  background: #2d2d44;
+  color: white;
+  box-sizing: border-box;
+}
+
+#clearHistory {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 3px;
+  background: #dc3545;
+}
+
+.buttons {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.main-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.sci-grid, .mem-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.span-2 { grid-column: span 2; }
+
+button {
+  padding: 15px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  font-weight: bold;
+}
+
+button:active {
+  transform: scale(0.95);
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.btn {
+  background: #2d2d44;
+  color: white;
+}
+
+.btn:hover { background: #3a3a55; }
+
+.operator {
+  background: #ff9500;
+}
+
+.operator:hover { background: #ffb347; }
+
+.sci {
+  background: #6f42c1;
+}
+
+.sci:hover { background: #854fca; }
+
+.mem {
+  background: #17a2b8;
+}
+
+.mem:hover { background: #1bc6e0; }
+
+.func {
+  background: #ffc107;
+  color: #212529;
+}
+
+.func:hover { background: #ffda6a; }
+
+#equals {
+  background: #28a745;
+  grid-column: span 2;
+}
+
+#equals:hover { background: #34ce57; }
+
+#clear {
+  background: #dc3545;
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+#clear:hover { background: #e4606d; }
+
+.reset-btn {
+  background: #dc3545;
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.reset-btn:hover { background: #e4606d; }
+
+.reset-btn:active {
+  transform: scale(0.95);
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.mode-btn {
+  background: #6c757d;
+
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+.mode-btn:hover { background: #5a6268; }
+
+.small-btn {
+  background: #6c757d;
+  padding: 5px 10px;
+}
+
+.small-btn:hover { background: #5a6268; }
+
+#history {
+  margin-top: 15px;
+  max-height: 150px;
+  overflow-y: auto;
+  text-align: left;
+  padding-left: 10px;
+  background: #2d2d44;
+  border-radius: 5px;
+  list-style: none;
+  padding: 10px;
+}
+
+#history li {
+  padding: 5px 0;
+  border-bottom: 1px solid #3a3a55;
+  font-size: 14px;
+}
+
+#history li:last-child { border-bottom: none; }
+
+.sci-buttons, .mem-buttons {
+  margin: 20px 0;
+  padding: 15px;
+  background: #25253a;
+  border-radius: 8px;
+}
+
+@media (max-width: 480px) {
+  .container { padding: 15px; width: 95vw; }
+  .main-grid, .sci-grid, .mem-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  button { padding: 12px; font-size: 16px; }
+  #display { font-size: 20px; padding: 8px 40px 8px 50px; }
+}
